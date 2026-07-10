@@ -9,15 +9,14 @@ const {
 } = require("../controllers/applicationController");
 
 const authMiddleware = require("../middleware/authMiddleware");
+const adminMiddleware = require("../middleware/adminMiddleware");
 
-// Apply for a Job
+// Student
 router.post("/", authMiddleware, applyJob);
-
-// Get My Applications
 router.get("/my", authMiddleware, getMyApplications);
 
-router.get("/", authMiddleware, getAllApplications);
-
-router.put("/:id", authMiddleware, updateStatus);
+// Admin
+router.get("/", authMiddleware, adminMiddleware, getAllApplications);
+router.put("/:id", authMiddleware, adminMiddleware, updateStatus);
 
 module.exports = router;

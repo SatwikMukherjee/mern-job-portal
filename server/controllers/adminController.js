@@ -3,9 +3,8 @@ const Company = require("../models/Company");
 const Job = require("../models/Job");
 const Application = require("../models/Application");
 
-const dashboard = async (req, res) => {
+const getDashboard = async (req, res) => {
     try {
-
         const totalStudents = await User.countDocuments();
         const totalCompanies = await Company.countDocuments();
         const totalJobs = await Job.countDocuments();
@@ -30,5 +29,5 @@ const dashboard = async (req, res) => {
 };
 
 module.exports = {
-    dashboard
+    getDashboard
 };
