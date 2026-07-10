@@ -1,4 +1,10 @@
 # 🚀 MERN Job Portal
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-Authentication-black?logo=jsonwebtokens)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 A Full Stack **Placement Portal** built using the **MERN Stack (MongoDB, Express.js, React.js, Node.js)**. The portal provides separate dashboards for **Students** and **Admins**, allowing students to apply for jobs and administrators to manage companies, job postings, and applications.
 
