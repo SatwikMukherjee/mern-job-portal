@@ -1,4 +1,4 @@
-# 🚀 MERN Job Portal
+# 🚀 MERN Placement Portal
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
@@ -7,7 +7,23 @@
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-A Full Stack **Placement Portal** built using the **MERN Stack (MongoDB, Express.js, React.js, Node.js)**. The portal provides separate dashboards for **Students** and **Admins**, allowing students to apply for jobs while administrators manage companies, job postings, and applications.
+A full-stack **Placement Portal** built using the **MERN Stack (MongoDB, Express.js, React.js, Node.js)**. The application provides separate dashboards for **Students** and **Admins**, enabling students to explore and apply for jobs while administrators manage companies, job postings, and applications.
+
+---
+
+# 🌐 Live Demo
+
+### 🔗 Frontend
+https://mern-job-portal-client.onrender.com
+
+### 🔗 Backend
+https://mern-job-portal-zzvo.onrender.com
+
+---
+
+# 📦 GitHub Repository
+
+https://github.com/SatwikMukherjee/mern-job-portal
 
 ---
 
@@ -15,14 +31,14 @@ A Full Stack **Placement Portal** built using the **MERN Stack (MongoDB, Express
 
 ## 👨‍🎓 Student Module
 
-- Student Registration & Login
+- Student Registration
+- Secure Login & Logout
 - JWT Authentication
 - Student Dashboard
-- View Available Jobs
+- Browse Available Jobs
 - View Companies
 - Apply for Jobs
 - Track Application Status
-- Logout
 
 ---
 
@@ -31,6 +47,7 @@ A Full Stack **Placement Portal** built using the **MERN Stack (MongoDB, Express
 - Secure Admin Login
 - Admin Dashboard
 - Add Companies
+- Manage Companies
 - Add Job Openings
 - Manage Student Applications
 - Approve Applications
@@ -43,7 +60,8 @@ A Full Stack **Placement Portal** built using the **MERN Stack (MongoDB, Express
 - JWT Authentication
 - Password Hashing using bcrypt
 - Protected Routes
-- Role-Based Access Control (Student & Admin)
+- Role-Based Access Control
+- Secure REST APIs
 
 ---
 
@@ -51,11 +69,36 @@ A Full Stack **Placement Portal** built using the **MERN Stack (MongoDB, Express
 
 | Layer | Technology |
 |--------|------------|
-| Frontend | React.js (Create React App), Bootstrap 5, Axios |
+| Frontend | React.js, Bootstrap 5, Axios |
 | Backend | Node.js, Express.js |
-| Database | MongoDB, Mongoose |
+| Database | MongoDB Atlas, Mongoose |
 | Authentication | JWT, bcrypt |
 | Routing | React Router DOM |
+| Deployment | Render |
+
+---
+
+# ☁️ Deployment
+
+| Service | Platform |
+|----------|----------|
+| Frontend | Render Static Site |
+| Backend | Render Web Service |
+| Database | MongoDB Atlas |
+
+---
+
+# 🏗 System Architecture
+
+```text
+React.js Frontend
+        │
+        ▼
+Express.js REST API
+        │
+        ▼
+MongoDB Atlas Database
+```
 
 ---
 
@@ -68,12 +111,16 @@ mern-job-portal/
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
+│   │   ├── context/
+│   │   ├── layouts/
 │   │   ├── pages/
+│   │   ├── services/
 │   │   ├── App.js
 │   │   └── index.js
 │   └── package.json
 │
 ├── server/
+│   ├── config/
 │   ├── controllers/
 │   ├── middleware/
 │   ├── models/
@@ -83,9 +130,7 @@ mern-job-portal/
 │   └── package.json
 │
 ├── screenshots/
-│
 ├── README.md
-│
 └── .gitignore
 ```
 
@@ -93,7 +138,7 @@ mern-job-portal/
 
 # ⚙️ Installation
 
-## Clone the Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/SatwikMukherjee/mern-job-portal.git
@@ -101,7 +146,7 @@ git clone https://github.com/SatwikMukherjee/mern-job-portal.git
 
 ---
 
-## Backend Setup
+## Install Backend
 
 ```bash
 cd server
@@ -111,7 +156,7 @@ npm run dev
 
 ---
 
-## Frontend Setup
+## Install Frontend
 
 ```bash
 cd client
@@ -133,9 +178,9 @@ JWT_SECRET=your_secret_key
 
 ---
 
-# 📸 Project Screenshots
+# 📸 Screenshots
 
-## 🔐 Login Page
+## 🔐 Login
 
 ![Login](screenshots/login.png)
 
@@ -153,25 +198,25 @@ JWT_SECRET=your_secret_key
 
 ---
 
-## 💼 Jobs Page
+## 💼 Jobs
 
 ![Jobs](screenshots/jobs.png)
 
 ---
 
-## 🏢 Companies Page
+## 🏢 Companies
 
 ![Companies](screenshots/companies.png)
 
 ---
 
-## 📄 My Applications
+## 📄 Applications
 
 ![Applications](screenshots/applications.png)
 
 ---
 
-# 🔄 Project Workflow
+# 🔄 Application Workflow
 
 ```text
 Student
@@ -180,7 +225,7 @@ Student
 Register / Login
    │
    ▼
-Browse Companies & Jobs
+Browse Jobs & Companies
    │
    ▼
 Apply for Job
@@ -200,14 +245,14 @@ Student Views Updated Status
 
 ---
 
-# 📖 REST API Endpoints
+# 📖 REST API
 
 ## Authentication
 
 | Method | Endpoint | Description |
 |---------|----------|-------------|
-| POST | `/api/auth/register` | Register Student |
-| POST | `/api/auth/login` | Login User |
+| POST | /api/auth/register | Register Student |
+| POST | /api/auth/login | Login User |
 
 ---
 
@@ -215,8 +260,8 @@ Student Views Updated Status
 
 | Method | Endpoint |
 |---------|----------|
-| GET | `/api/student/profile` |
-| PUT | `/api/student/profile` |
+| GET | /api/student/profile |
+| PUT | /api/student/profile |
 
 ---
 
@@ -224,8 +269,8 @@ Student Views Updated Status
 
 | Method | Endpoint |
 |---------|----------|
-| GET | `/api/jobs` |
-| POST | `/api/jobs` |
+| GET | /api/jobs |
+| POST | /api/jobs |
 
 ---
 
@@ -233,8 +278,8 @@ Student Views Updated Status
 
 | Method | Endpoint |
 |---------|----------|
-| GET | `/api/company` |
-| POST | `/api/company` |
+| GET | /api/company |
+| POST | /api/company |
 
 ---
 
@@ -242,10 +287,10 @@ Student Views Updated Status
 
 | Method | Endpoint |
 |---------|----------|
-| POST | `/api/application` |
-| GET | `/api/application/my` |
-| GET | `/api/admin/applications` |
-| PUT | `/api/admin/application/:id` |
+| POST | /api/application |
+| GET | /api/application/my |
+| GET | /api/admin/applications |
+| PUT | /api/admin/application/:id |
 
 ---
 
@@ -257,10 +302,9 @@ Student Views Updated Status
 - Forgot Password
 - Search & Filter Jobs
 - Pagination
-- Admin Analytics Dashboard
 - Student Profile Photo
 - Interview Scheduling
-- Placement Statistics
+- Placement Statistics Dashboard
 - Live Notifications
 
 ---
@@ -273,17 +317,19 @@ Feel free to fork this repository and submit a Pull Request.
 
 ---
 
-# 💻 Author
+# 👨‍💻 Author
 
 **Satwik Mukherjee**
 
+- 📧 Email: satwikjee2004@gmail.com
 - GitHub: https://github.com/SatwikMukherjee
+- LinkedIn: https://www.linkedin.com/in/satwik-mukherjee-5aab1b2b9/
 
 ---
 
 # ⭐ Support
 
-If you like this project, please consider giving it a ⭐ on GitHub.
+If you found this project helpful, consider giving it a ⭐ on GitHub.
 
 ---
 
